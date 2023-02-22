@@ -22,6 +22,7 @@ public class Persona {
     @Column(name= "id")
     private Long idpersona;
 
+    private String nombre;
     private String apellido;
     private Date fecha_nacimiento;
     private String nacionalidad;
