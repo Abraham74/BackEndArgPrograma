@@ -3,6 +3,8 @@ package com.backend.portfolio.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -14,7 +16,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.backend.portfolio.models.Persona;
-
 import com.backend.portfolio.service.PersonaService;
 
 
@@ -32,8 +33,16 @@ public class PersonaController {
 		return servicio.verPersona();
 	}
 
+	//Este metodo obtiene el detalle de una persona
+	@GetMapping("/persona/detalle/{id}")
+    public ResponseEntity<Persona> getById(@PathVariable("id") Long id){
+        if(!servicio.existsById(id))
+            return new ResponseEntity<Persona>(HttpStatus.NOT_FOUND);
+        Persona persona = servicio.getOne(id).get();
+        return new ResponseEntity<Persona>(persona, HttpStatus.OK);
+    }
+
 	//Este metodo crea una nueva persona
-	@PreAuthorize("hasRole('ADMIN')")
 	@PostMapping("/persona/nueva")
 	public void agregarPersona(@RequestBody Persona pers){
 
@@ -42,7 +51,6 @@ public class PersonaController {
 
 	//Este metodo modifica a una persona
 	@PutMapping("/persona/modificar/{id}")
-	@PreAuthorize("hasRole('ADMIN')")
 	public void modificarPersona(@PathVariable Long id,@RequestBody Persona pers){
 
 		servicio.editarPersona(id, pers);
@@ -50,7 +58,6 @@ public class PersonaController {
 
 	//Este metodo elimina una persona
 	@DeleteMapping("/persona/eliminar/{id}")
-	@PreAuthorize("hasRole('ADMIN')")
 	public void borrarPersona(@PathVariable Long id){
 
 		servicio.eliminarPersona(id);

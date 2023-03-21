@@ -38,10 +38,11 @@ public class Persona {
     private String sobre_mi_r2;
     private String celular;
     private String ciudad;
-    private String grade;
+    private String nivelIngles;
     private String freelance;
     private int dni;
     private String cuit;
+    private String resumen;
 }
 
 

@@ -3,6 +3,8 @@ package com.backend.portfolio.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -31,8 +33,17 @@ public class CursosController {
 		return servicio.verCursos();
 	}
 
+	//Este metodo obtiene el detalle de un cursos
+	@GetMapping("/cursos/detalle/{id}")
+	public ResponseEntity<Cursos> getById(@PathVariable("id") Long id){
+		if(!servicio.existsById(id))
+			return new ResponseEntity<Cursos>(HttpStatus.NOT_FOUND);
+			Cursos cursos = servicio.getOne(id).get();
+		return new ResponseEntity<Cursos>(cursos, HttpStatus.OK);
+	}
+	
+
 	//Este metodo crea un nuevo curso
-	@PreAuthorize("hasRole('ADMIN')")
 	@PostMapping("/cursos/nuevo")
 	public void agregarCurso(@RequestBody Cursos cur){
 
@@ -41,16 +52,14 @@ public class CursosController {
 
 	//Este metodo modifica un curso
 	@PutMapping("/cursos/modificar/{id}")
-	@PreAuthorize("hasRole('ADMIN')")
-	public void modificarPersona(@PathVariable Long id,@RequestBody Cursos cur){
+	public void modificarcursos(@PathVariable Long id,@RequestBody Cursos cur){
 
 		servicio.editarCurso(id, cur);
 	}
 
 	//Este metodo elimina un curso
 	@DeleteMapping("/cursos/eliminar/{id}")
-	@PreAuthorize("hasRole('ADMIN')")
-	public void borrarPersona(@PathVariable Long id){
+	public void borrarcursos(@PathVariable Long id){
 
 		servicio.eliminarCurso(id);
 	}

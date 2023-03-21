@@ -23,6 +23,6 @@ public class Educacion {
     private String titulo;
     private String nombre;
     private int inicio;
-    private int fin;
+    private String fin;
     private String resumen_edu;
 }
