@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "PortfolioApplication",
+            "request": "launch",
+            "mainClass": "com.backend.portfolio.PortfolioApplication",
+            "projectName": ""
+        },
+        {
+            "type": "java",
             "name": "Spring Boot-PortfolioApplication<portfolio>",
             "request": "launch",
             "cwd": "${workspaceFolder}",
