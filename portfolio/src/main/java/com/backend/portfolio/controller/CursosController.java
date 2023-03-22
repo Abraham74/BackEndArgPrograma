@@ -19,7 +19,7 @@ import com.backend.portfolio.models.Cursos;
 import com.backend.portfolio.service.CursosService;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "https://frontportfolio-916a5.web.app")
 public class CursosController {
     
     @Autowired

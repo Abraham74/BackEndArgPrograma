@@ -19,7 +19,7 @@ import com.backend.portfolio.models.Experiencia;
 import com.backend.portfolio.service.ExperienciaService;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "https://frontportfolio-916a5.web.app")
 public class ExperienciaController {
     
     @Autowired
