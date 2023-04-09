@@ -2,15 +2,16 @@ package com.backend.portfolio.service;
 
 import java.util.List;
 
-import com.backend.portfolio.models.Experiencia;
+import com.backend.portfolio.DTO.ExperienciaDTO;
+import com.backend.portfolio.models.Experiencias;
 
 public interface IExperienciaService {
 
-    public List<Experiencia> verExperiencia();
+    public List<ExperienciaDTO> verExperiencia();
 
-    public void crearExperiencia (Experiencia exp);
+    public Experiencias crearExperiencia (ExperienciaDTO exp);
 
     public void eliminarExperiencia(Long id);
 
-    public Experiencia editarExperiencia (Long id, Experiencia exp);
+    public ExperienciaDTO editarExperiencia (ExperienciaDTO exp);
 }

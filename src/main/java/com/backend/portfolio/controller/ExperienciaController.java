@@ -5,58 +5,52 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
-import com.backend.portfolio.models.Experiencia;
+import com.backend.portfolio.DTO.ExperienciaDTO;
 
 import com.backend.portfolio.service.ExperienciaService;
 
 @RestController
 @CrossOrigin(origins = "https://frontportfolio-916a5.web.app")
+@RequestMapping("/v1")
 public class ExperienciaController {
     
     @Autowired
 	private ExperienciaService servicio;
 
     //Este metodo retorna todos los datos de mi experiencia
-	@GetMapping("/experiencia")
-	public List<Experiencia> experienciaExperiencial(){
+	@GetMapping("/experiencias")
+	public List<ExperienciaDTO> obtenerExperiencias(){
 
 		return servicio.verExperiencia();
 	}
 
 	//Este metodo obtiene el detalle de una Experiencia Profesional
-	@GetMapping("/experiencia/detalle/{id}")
-    public ResponseEntity<Experiencia> getById(@PathVariable("id") Long id){
+	@GetMapping("/experiencias/detalle/{id}")
+    public ResponseEntity<ExperienciaDTO> getById(@PathVariable("id") Long id){
         if(!servicio.existsById(id))
-            return new ResponseEntity<Experiencia>(HttpStatus.NOT_FOUND);
-        Experiencia experiencia = servicio.getOne(id).get();
-        return new ResponseEntity<Experiencia>(experiencia, HttpStatus.OK);
+            return new ResponseEntity<ExperienciaDTO>(HttpStatus.NOT_FOUND);
+        ExperienciaDTO experiencia = servicio.getOne(id);
+        return new ResponseEntity<ExperienciaDTO>(experiencia, HttpStatus.OK);
     }
 
 	//Este metodo crea un nuevo item de Experiencia
-	@PostMapping("/experiencia/nueva")
-	public void agregarExperiencia(@RequestBody Experiencia exp){
+	@PostMapping("/experiencias/nueva")
+	public void agregarExperiencia(@RequestBody ExperienciaDTO exp){
 
 		servicio.crearExperiencia(exp);
 	}
 
 	//Este metodo modifica a un item de Experiencia
-	@PutMapping("/experiencia/modificar/{id}")
-	public void modificarExperiencia(@PathVariable Long id,@RequestBody Experiencia exp){
+	@PutMapping("/experiencias/modificar/{id}")
+	public void modificarExperiencia(@RequestBody ExperienciaDTO exp){
 
-		servicio.editarExperiencia(id, exp);
+		servicio.editarExperiencia(exp);
 	}
 
 	//Este metodo elimina un item de Experiencia
-	@DeleteMapping("/experiencia/eliminar/{id}")
+	@DeleteMapping("/experiencias/eliminar/{id}")
 	public void borrarExperiencia(@PathVariable Long id){
 
 		servicio.eliminarExperiencia(id);

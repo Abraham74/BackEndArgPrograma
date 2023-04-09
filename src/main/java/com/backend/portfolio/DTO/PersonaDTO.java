@@ -1,23 +1,17 @@
-package com.backend.portfolio.models;
+package com.backend.portfolio.DTO;
 
 import java.sql.Date;
 import java.util.List;
 
-import javax.persistence.*;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
-import lombok.*;
-
-
-@Entity
 @Getter
 @Setter
 @NoArgsConstructor
-public class Persona {
-    
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name= "id")
-    private Long idpersona;
+public class PersonaDTO {
+    private Long id;
 
     private String nombre;
     private String apellido;
@@ -25,8 +19,6 @@ public class Persona {
     private String nacionalidad;
     private String correo;
     private String ocupacion;
-    private String image_background;
-    private String image_perfil;
     private String domicilio;
     private String estado_civil;
     private String celular;
@@ -36,9 +28,5 @@ public class Persona {
     private int dni;
     private String cuit;
 
-    @OneToMany(mappedBy = "persona", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    private List<Resumenes> resumenes;
+    private List<ResumenesDTO> resumen;
 }
-
-
-

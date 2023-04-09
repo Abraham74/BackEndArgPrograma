@@ -1,5 +1,7 @@
 package com.backend.portfolio.models;
 
+import java.util.List;
+
 import javax.persistence.*;
 
 import lombok.*;
@@ -8,15 +10,18 @@ import lombok.*;
 @Getter
 @Setter
 @NoArgsConstructor
-public class Educacion {
+@Table(name = "experiencia")
+public class Experiencias {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name= "id_edu")
-    private Long id_edu;
+    @Column(name= "id_exp")
+    private Long id;
 
     private String titulo;
     private String nombre;
     private int inicio;
     private String fin;
-    private String resumen_edu;
+
+    @OneToMany(mappedBy = "experiencia", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private List<Tareas> tareas;
 }
