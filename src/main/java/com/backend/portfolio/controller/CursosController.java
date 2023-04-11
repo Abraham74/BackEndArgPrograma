@@ -12,7 +12,7 @@ import com.backend.portfolio.models.Cursos;
 import com.backend.portfolio.service.CursosService;
 
 @RestController
-@CrossOrigin(origins = "https://frontportfolio-916a5.web.app")
+@CrossOrigin(origins = "http://localhost:4200")
 @RequestMapping("/v1")
 public class CursosController {
     

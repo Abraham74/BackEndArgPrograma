@@ -12,7 +12,7 @@ import com.backend.portfolio.DTO.ExperienciaDTO;
 import com.backend.portfolio.service.ExperienciaService;
 
 @RestController
-@CrossOrigin(origins = "https://frontportfolio-916a5.web.app")
+@CrossOrigin(origins = "http://localhost:4200")
 @RequestMapping("/v1")
 public class ExperienciaController {
     
