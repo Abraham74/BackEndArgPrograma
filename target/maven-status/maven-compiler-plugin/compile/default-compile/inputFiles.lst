@@ -2,7 +2,9 @@ c:\Users\abrah\OneDrive\Escritorio\Argentina programa\modulo 8\BackEndArgProgram
 c:\Users\abrah\OneDrive\Escritorio\Argentina programa\modulo 8\BackEndArgPrograma\src\main\java\com\backend\portfolio\controller\PersonaController.java
 c:\Users\abrah\OneDrive\Escritorio\Argentina programa\modulo 8\BackEndArgPrograma\src\main\java\com\backend\portfolio\models\Persona.java
 c:\Users\abrah\OneDrive\Escritorio\Argentina programa\modulo 8\BackEndArgPrograma\src\main\java\com\backend\portfolio\models\Educacion.java
+c:\Users\abrah\OneDrive\Escritorio\Argentina programa\modulo 8\BackEndArgPrograma\src\main\java\com\backend\portfolio\DTO\ResumenesDTO.java
 c:\Users\abrah\OneDrive\Escritorio\Argentina programa\modulo 8\BackEndArgPrograma\src\main\java\com\backend\portfolio\security\Repository\IRolRepository.java
+c:\Users\abrah\OneDrive\Escritorio\Argentina programa\modulo 8\BackEndArgPrograma\src\main\java\com\backend\portfolio\DTO\TareasDTO.java
 c:\Users\abrah\OneDrive\Escritorio\Argentina programa\modulo 8\BackEndArgPrograma\src\main\java\com\backend\portfolio\security\Entity\Rol.java
 c:\Users\abrah\OneDrive\Escritorio\Argentina programa\modulo 8\BackEndArgPrograma\src\main\java\com\backend\portfolio\service\EducacionService.java
 c:\Users\abrah\OneDrive\Escritorio\Argentina programa\modulo 8\BackEndArgPrograma\src\main\java\com\backend\portfolio\security\Service\UsuarioService.java
@@ -12,6 +14,7 @@ c:\Users\abrah\OneDrive\Escritorio\Argentina programa\modulo 8\BackEndArgProgram
 c:\Users\abrah\OneDrive\Escritorio\Argentina programa\modulo 8\BackEndArgPrograma\src\main\java\com\backend\portfolio\security\DTO\NuevoUsuario.java
 c:\Users\abrah\OneDrive\Escritorio\Argentina programa\modulo 8\BackEndArgPrograma\src\main\java\com\backend\portfolio\repository\CursosRepository.java
 c:\Users\abrah\OneDrive\Escritorio\Argentina programa\modulo 8\BackEndArgPrograma\src\main\java\com\backend\portfolio\security\Enums\RolNombre.java
+c:\Users\abrah\OneDrive\Escritorio\Argentina programa\modulo 8\BackEndArgPrograma\src\main\java\com\backend\portfolio\models\Tareas.java
 c:\Users\abrah\OneDrive\Escritorio\Argentina programa\modulo 8\BackEndArgPrograma\src\main\java\com\backend\portfolio\repository\ExperienciaRepository.java
 c:\Users\abrah\OneDrive\Escritorio\Argentina programa\modulo 8\BackEndArgPrograma\src\main\java\com\backend\portfolio\security\DTO\JwtDTO.java
 c:\Users\abrah\OneDrive\Escritorio\Argentina programa\modulo 8\BackEndArgPrograma\src\main\java\com\backend\portfolio\security\jwt\JwtProvider.java
@@ -25,11 +28,14 @@ c:\Users\abrah\OneDrive\Escritorio\Argentina programa\modulo 8\BackEndArgProgram
 c:\Users\abrah\OneDrive\Escritorio\Argentina programa\modulo 8\BackEndArgPrograma\src\main\java\com\backend\portfolio\controller\EducacionController.java
 c:\Users\abrah\OneDrive\Escritorio\Argentina programa\modulo 8\BackEndArgPrograma\src\main\java\com\backend\portfolio\security\jwt\JwtEntryPoint.java
 c:\Users\abrah\OneDrive\Escritorio\Argentina programa\modulo 8\BackEndArgPrograma\src\main\java\com\backend\portfolio\repository\PersonaRepository.java
-c:\Users\abrah\OneDrive\Escritorio\Argentina programa\modulo 8\BackEndArgPrograma\src\main\java\com\backend\portfolio\models\Experiencia.java
+c:\Users\abrah\OneDrive\Escritorio\Argentina programa\modulo 8\BackEndArgPrograma\src\main\java\com\backend\portfolio\repository\ResumenesRepository.java
+c:\Users\abrah\OneDrive\Escritorio\Argentina programa\modulo 8\BackEndArgPrograma\src\main\java\com\backend\portfolio\repository\TareasRepository.java
 c:\Users\abrah\OneDrive\Escritorio\Argentina programa\modulo 8\BackEndArgPrograma\src\main\java\com\backend\portfolio\security\MainSecurity.java
 c:\Users\abrah\OneDrive\Escritorio\Argentina programa\modulo 8\BackEndArgPrograma\src\main\java\com\backend\portfolio\repository\EducacionRepository.java
+c:\Users\abrah\OneDrive\Escritorio\Argentina programa\modulo 8\BackEndArgPrograma\src\main\java\com\backend\portfolio\models\Resumenes.java
 c:\Users\abrah\OneDrive\Escritorio\Argentina programa\modulo 8\BackEndArgPrograma\src\main\java\com\backend\portfolio\security\Controller\AuthController.java
 c:\Users\abrah\OneDrive\Escritorio\Argentina programa\modulo 8\BackEndArgPrograma\src\main\java\com\backend\portfolio\service\ICursosService.java
+c:\Users\abrah\OneDrive\Escritorio\Argentina programa\modulo 8\BackEndArgPrograma\src\main\java\com\backend\portfolio\models\Experiencias.java
 c:\Users\abrah\OneDrive\Escritorio\Argentina programa\modulo 8\BackEndArgPrograma\src\main\java\com\backend\portfolio\service\PersonaService.java
 c:\Users\abrah\OneDrive\Escritorio\Argentina programa\modulo 8\BackEndArgPrograma\src\main\java\com\backend\portfolio\security\Entity\Usuario.java
 c:\Users\abrah\OneDrive\Escritorio\Argentina programa\modulo 8\BackEndArgPrograma\src\main\java\com\backend\portfolio\security\Service\RolService.java
@@ -37,3 +43,5 @@ c:\Users\abrah\OneDrive\Escritorio\Argentina programa\modulo 8\BackEndArgProgram
 c:\Users\abrah\OneDrive\Escritorio\Argentina programa\modulo 8\BackEndArgPrograma\src\main\java\com\backend\portfolio\security\Repository\IUsuarioRepository.java
 c:\Users\abrah\OneDrive\Escritorio\Argentina programa\modulo 8\BackEndArgPrograma\src\main\java\com\backend\portfolio\security\Service\IUserDetailsService.java
 c:\Users\abrah\OneDrive\Escritorio\Argentina programa\modulo 8\BackEndArgPrograma\src\main\java\com\backend\portfolio\controller\CursosController.java
+c:\Users\abrah\OneDrive\Escritorio\Argentina programa\modulo 8\BackEndArgPrograma\src\main\java\com\backend\portfolio\DTO\ExperienciaDTO.java
+c:\Users\abrah\OneDrive\Escritorio\Argentina programa\modulo 8\BackEndArgPrograma\src\main\java\com\backend\portfolio\DTO\PersonaDTO.java
