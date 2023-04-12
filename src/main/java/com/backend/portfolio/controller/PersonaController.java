@@ -13,7 +13,7 @@ import com.backend.portfolio.service.PersonaService;
 
 
 @RestController
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "https://frontportfolio-916a5.web.app")
 @RequestMapping("/v1")
 public class PersonaController {
     
