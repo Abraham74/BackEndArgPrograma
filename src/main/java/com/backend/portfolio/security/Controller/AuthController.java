@@ -33,6 +33,7 @@ import com.backend.portfolio.security.jwt.JwtProvider;
 @RestController
 @RequestMapping("/auth")
 @CrossOrigin(origins = "https://frontportfolio-916a5.web.app")
+//@CrossOrigin(origins = "http://localhost:4200")
 public class AuthController {
     
     @Autowired
